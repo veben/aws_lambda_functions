@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  ########################## CORTEX POSTGRES ##########################
+  cortex-postgresql:
+    container_name: cortex-postgresql
+    image: postgres:11.5-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=rds-postgres-db
+      - POSTGRES_USER=master
+      - POSTGRES_PASSWORD=master-pass
