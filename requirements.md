@@ -21,10 +21,12 @@
 4. Add existing **Policy** `PowerUserAccess` to the group
 5. Add existing **Policy** `IAMFullAccess` to the group
 6. Create **User** named `lambda-deployer`
-7. Check **Programmatic access**
-8. Add it to the Lambda_Deployer group 
-9. Copy **Access keys** (access key ID and secret access key)
-10. Put them in `C:\Users\<User>\.aws/credentials` file, like that:
+7. Check **Add user to group** an add it to the Lambda_Deployer group
+8. Create the user
+9. Edit the user and click on `Security credentials` and `Create access key`
+10. Choose `Other` and create access keys
+11. Copy **Access keys** (access key ID and secret access key)
+12. Put them in `~/.aws/credentials` file, like that:
 	```
 	[p-lambda-deployer]
 	aws_access_key_id = dev_ACCESS_KEY
